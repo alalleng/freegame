@@ -1,7 +1,3 @@
-Here’s an updated README that reflects the theoretical nature of the project and aligns with our previous discussions:
-
----
-
 # Free Game - README
 
 ## Overview
@@ -18,27 +14,27 @@ Here’s an updated README that reflects the theoretical nature of the project a
 ## Tools Referenced
 The following tools are considered in this theoretical design:
 - **Text Analytics Tools:**
-  - Apache OpenNLP
-  - Google Cloud Natural Language API
-  - General Architecture for Text Engineering (GATE)
-  - Datumbox
-  - KH Coder
-  - QDA Miner Lite
-  - RapidMiner Text Mining Extension
-  - VisualText
-  - TAMS
-  - Natural Language Toolkit (NLTK)
+  - Apache OpenNLP https://github.com/apache/opennlp
+  - Google Cloud Natural Language API https://cloud.google.com/natural-language/
+  - General Architecture for Text Engineering (GATE) https://github.com/GateNLP/gate-core
+  - Datumbox https://github.com/datumbox/datumbox-framework
+  - KH Coder https://github.com/ko-ichi-h/khcoder
+  - QDA Miner Lite https://github.com/MSUDenverSystemsEngineering/QDA-Miner-Lite/tree/master
+  - RapidMiner Text Mining Extension https://github.com/rapidminer/rapidminer-studio
+  - VisualText https://github.com/VisualText/nlp-engine
+  - TAMS https://github.com/TAMS-Group/tamsviz
+  - Natural Language Toolkit (NLTK) https://github.com/nltk/nltk
 
 - **Server and Storage:**
-  - XAMPP (Apache, MySQL, PHP, and Perl)
-  - IPFS (InterPlanetary File System)
+  - XAMPP (Apache, MySQL, PHP, and Perl) https://github.com/ApacheFriends/xampp-build
+  - IPFS (InterPlanetary File System) https://github.com/ipfs
 
 - **Management Tools:**
-  - Domainmod for centralized resource management.
+  - Domainmod for centralized resource management. https://github.com/domainmod
 
 - **AI and Cognitive Services:**
-  - Azure AI Studio
-  - Azure Cognitive Services (e.g., Whisper AI, Search Agent)
+  - Microsoft Autogen https://github.com/microsoft/autogen
+  - Microsoft Semantic Kernel https://github.com/microsoft/semantic-kernel
 
 ## Purpose
 This repository is for **educational and illustrative purposes only**. It demonstrates how infrastructure as code (IaC), open-source tools, and AI-driven workflows could theoretically be integrated into a unified system. The templates and code are not tested for production use and are not guaranteed to function as described.
