@@ -1,0 +1,81 @@
+# Framework Overview
+
+This framework integrates:
+
+1. **Infinite Random Engine (IRE):** Exhaustively generates all potential solutions (\\(\Omega\\)) for a decision-making problem.
+2. **Computational Group Theory:** Reduces redundancy by grouping equivalent solutions using group-theoretic transformations.
+3. **Forward-Forward Algorithm (FFA):** Evaluates solutions by optimizing a localized "goodness" function via positive and negative passes, inspired by Hinton (2022).
+
+The process formalizes decision-making across five key steps.
+
+---
+
+## Framework Steps
+
+### 1. Define the Configuration Space (\\(\Omega\\))
+Using the Infinite Random Engine (IRE), generate all possible options:
+\\[
+\Omega = \{\omega_1, \omega_2, \ldots, \omega_n\}.
+\\]
+Each option \\(\omega_i\\) represents a potential solution within the decision space.
+
+---
+
+### 2. Reduce Redundancy with Computational Group Theory
+Identify equivalence classes of solutions via group-theoretic transformations:
+\\[
+\text{Orbit}(\omega) = \{g \cdot \omega \; | \; g \in G\},
+\\]
+where \\(G\\) is the symmetry group acting on \\(\Omega\\). This step groups solutions with equivalent impact, reducing computational complexity.
+
+---
+
+### 3. Compute Canonical Forms
+Select the most representative option (\\(\text{CF}(\omega)\\)) in each equivalence class:
+\\[
+\text{CF}(\omega) = \arg \min_{g \in G} f(g \cdot \omega).
+\\]
+
+---
+
+### 4. Evaluate Options Using the Goodness Function
+Evaluate each canonical form using the goodness function:
+\\[
+G(\omega) = \text{Utility} - \text{Cost}.
+\\]
+
+#### Variability and Interdependence:
+- **Without SSCP:**
+\\[
+G(\omega) = \text{Utility} - \text{Cost}.
+\\]
+- **With SSCP (No Inverse):**
+\\[
+G(\omega) = \text{Utility} - \left( \sum x_i^2 + \sum y_i^2 + 2\sum x_i y_i \right).
+\\]
+- **With SSCP (Inverse):**
+\\[
+G(\omega) = \text{Utility} - \frac{1}{\sum x_i^2 + \sum y_i^2 + 2\sum x_i y_i}.
+\\]
+
+---
+
+### 5. Optimize Decision-Making
+Select the optimal solution (\\(\omega^*\\)) by maximizing the goodness function across all canonical forms:
+\\[
+\omega^* = \arg \max_{\omega \in \text{CF}(\Omega)} G(\omega).
+\\]
+
+---
+
+## Integrated Framework Layers
+This unified framework operates across multiple layers:
+- **Syntax Layer:** Converts raw options into structured, analyzable representations.
+- **Logic Layer:** Refines equivalence classes based on logical rules and computational group theory.
+- **Dynamic Layer:** Adapts solutions dynamically to changing conditions via the Forward-Forward Algorithm.
+- **Meta Layer:** Evolves overarching strategies by integrating results from lower layers.
+
+---
+
+## Reference
+Hinton, G. (2022). *The Forward-Forward Algorithm: A Biological Alternative to Backpropagation.* Retrieved from arXiv.
